@@ -511,12 +511,12 @@ ARM Macro Assembler    Page 8
               00000200 
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
-ork --depend=.\objects\startup_sam3xa.d -o.\objects\startup_sam3xa.o -I"E:\Git 
+ork --depend=.\objects\startup_sam3xa.d -o.\objects\startup_sam3xa.o -I"D:\Git 
 Projects\armt\T01_blinky\RTE" -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Inclu
 de -IC:\Keil_v5\ARM\PACK\Keil\SAM3_DFP\1.0.1\Device\Include\SAM3XA --predefine=
-"__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 517" --predefine="_RTE_ SET
-A 1" --predefine="__SAM3X8E__ SETA 1" --list=.\listings\startup_sam3xa.lst RTE\
-Device\ATSAM3X8E\startup_SAM3XA.s
+"__UVISION_VERSION SETA 517" --predefine="_RTE_ SETA 1" --predefine="__SAM3X8E_
+_ SETA 1" --list=.\listings\startup_sam3xa.lst RTE\Device\ATSAM3X8E\startup_SAM
+3XA.s
 
 
 
@@ -1242,4 +1242,4 @@ Symbol: __use_two_region_memory
       None
 Comment: __use_two_region_memory unused
 3 symbols
-410 symbols in table
+409 symbols in table

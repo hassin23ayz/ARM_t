@@ -455,7 +455,7 @@
       </component>
     </components>
     <files>
-      <file attr="config" category="source" condition="SAM3XA" name="Device\Source\ARM\startup_SAM3XA.s">
+      <file attr="config" category="source" condition="SAM3XA" name="Device\Source\ARM\startup_SAM3XA.s" version="1.0.0">
         <instance index="0">RTE\Device\ATSAM3X8E\startup_SAM3XA.s</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="SAM3 CMSIS Device"/>
         <package name="SAM3_DFP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="Keil" version="1.0.1"/>
@@ -463,7 +463,7 @@
           <targetInfo name="Target 1"/>
         </targetInfos>
       </file>
-      <file attr="config" category="source" condition="SAM3XA" name="Device\Source\system_SAM3XA.c">
+      <file attr="config" category="source" condition="SAM3XA" name="Device\Source\system_SAM3XA.c" version="1.0.0">
         <instance index="0">RTE\Device\ATSAM3X8E\system_SAM3XA.c</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="SAM3 CMSIS Device"/>
         <package name="SAM3_DFP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="Keil" version="1.0.1"/>

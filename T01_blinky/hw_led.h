@@ -47,13 +47,13 @@
 #define LED_GREEN_PIN      BV(27)  // Port B
 
 
-#define LED_ON(led) \
+#define LED_OFF(led) \
 	do { \
 		REG_PIOB_CODR = LED_GREEN_PIN; \
 	} while (0)
 
 
-#define LED_OFF(led) \
+#define LED_ON(led) \
 	do { \
 			REG_PIOB_SODR = LED_GREEN_PIN; \
 	} while (0)

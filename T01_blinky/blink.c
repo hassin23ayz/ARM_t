@@ -2,25 +2,37 @@
 #include "RTE_Components.h"             // Component selection
 #include "hw_led.h"
 
+static volatile unsigned int delayTimeTick = 0;
+
+void my_delay_ms(unsigned int ticksIn_ms);
+
 int main()
 {
 	SystemInit();  //would initialize MCU's clock system, FLASH memoy interface
-	SysTick_Config(SystemCoreClock/2);
+	SysTick_Config(SystemCoreClock/1000);
 	LED_INIT();
-	LED_OFF();
+	
+	while(1)
+	{
+		LED_OFF();
+		my_delay_ms(1000);
+		LED_ON();
+		my_delay_ms(1000);
+	}
 	return 0;
 }
 
-/*__irq void SysTick_Handler()
+void SysTick_Handler()
 {
-	static _Bool toggle = 1;
-	
-	if (toggle == 1) {
-		LED_ON();
-		toggle = 0;
+	if(delayTimeTick < 0xFFFFFFFF)
+	{
+		delayTimeTick++;
 	}
-	else {
-		LED_OFF();
-		toggle = 1;
-	}
-}*/
+}
+
+void my_delay_ms(unsigned int ticksIn_ms)
+{
+	delayTimeTick = 0;
+	while(delayTimeTick < ticksIn_ms)
+	{}
+}
