@@ -1,4 +1,4 @@
-Dependencies for Project 'blinky', Target 'Target 1': (DO NOT MODIFY !)
+Dependencies for Project 'blinky', Target 'Target SAM3x8e': (DO NOT MODIFY !)
 F (.\blink.c)(0x56B2033C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I "D:\Git Projects\armt\T01_blinky\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\SAM3_DFP\1.0.1\Device\Include\SAM3XA-D__UVISION_VERSION="517" -D_RTE_ -D__SAM3X8E__-o .\objects\blink.o --omf_browse .\objects\blink.crf --depend .\objects\blink.d)
 I (C:\Keil_v5\ARM\PACK\Keil\SAM3_DFP\1.0.1\Device\Include\SAM3XA\sam3xa.h)(0x516CC396)
 I (C:\Keil_v5\ARM\PACK\Keil\SAM3_DFP\1.0.1\Device\Include\SAM3XA\sam3x8e.h)(0x516CC396)
@@ -75,7 +75,7 @@ I (C:\Keil_v5\ARM\PACK\Keil\SAM3_DFP\1.0.1\Device\Include\SAM3XA\instance\wdt.h)
 I (C:\Keil_v5\ARM\PACK\Keil\SAM3_DFP\1.0.1\Device\Include\SAM3XA\instance\rtc.h)(0x516CC396)
 I (C:\Keil_v5\ARM\PACK\Keil\SAM3_DFP\1.0.1\Device\Include\SAM3XA\instance\gpbr.h)(0x516CC396)
 I (C:\Keil_v5\ARM\PACK\Keil\SAM3_DFP\1.0.1\Device\Include\SAM3XA\pio\sam3x8e.h)(0x516CC396)
-I (D:\Git Projects\armt\T01_blinky\RTE\RTE_Components.h)(0x56AEFC2D)
+I (D:\Git Projects\armt\T01_blinky\RTE\RTE_Components.h)(0x56B2044E)
 I (hw_led.h)(0x56B1A412)
 F (.\hw_led.h)(0x56B1A412)()
 F (RTE\Device\ATSAM3X8E\startup_SAM3XA.s)(0x56AEFC2D)(--cpu Cortex-M3 -g --apcs=interwork -I "D:\Git Projects\armt\T01_blinky\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\SAM3_DFP\1.0.1\Device\Include\SAM3XA--pd "__UVISION_VERSION SETA 517" --pd "_RTE_ SETA 1" --pd "__SAM3X8E__ SETA 1"--list .\listings\startup_sam3xa.lst --xref -o .\objects\startup_sam3xa.o --depend .\objects\startup_sam3xa.d)

@@ -4,7 +4,7 @@
  *      *** Do not modify ! ***
  *
  * Project: 'blinky' 
- * Target:  'Target SAM3x8e' 
+ * Target:  'Target-LPC1311FHN33' 
  */
 
 #ifndef RTE_COMPONENTS_H
