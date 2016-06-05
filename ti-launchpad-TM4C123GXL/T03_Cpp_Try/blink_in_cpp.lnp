@@ -1,0 +1,7 @@
+--cpu Cortex-M4.fp
+".\blink.o"
+".\startup_tm4c123.o"
+".\system_tm4c123.o"
+--library_type=microlib --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\blink_in_cpp.map" -o .\blink_in_cpp.axf
