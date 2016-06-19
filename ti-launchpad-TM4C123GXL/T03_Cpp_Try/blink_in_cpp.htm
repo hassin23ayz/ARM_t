@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\blink_in_cpp.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\blink_in_cpp.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Wed Apr 27 16:57:52 2016
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Sun Jun 19 11:03:20 2016
 <BR><P>
 <H3>Maximum Stack Usage =          0 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1111,10 +1111,6 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(.text)
 </UL>
-<P><STRONG><a name="[7d]"></a>my_delay_ms(unsigned)</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, blink.o(i._Z11my_delay_msj))
-<BR><BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
 <P><STRONG><a name="[85]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
 <P><STRONG><a name="[86]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
@@ -1123,10 +1119,14 @@ Global Symbols
 
 <P><STRONG><a name="[76]"></a>main</STRONG> (Thumb, 150 bytes, Stack size 0 bytes, blink.o(i.main))
 <BR><BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_delay_ms(unsigned)
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_delay_ms
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
-</UL><P>
+</UL>
+<P><STRONG><a name="[7d]"></a>my_delay_ms</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, blink.o(i.my_delay_ms))
+<BR><BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+<P>
 <H3>
 Local Symbols
 </H3><P>

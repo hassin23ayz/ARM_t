@@ -28,14 +28,16 @@ Project File Date:  04/27/2016
 *** Using Compiler 'V5.06 update 1 (build 61)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'TM4C123GH6PM'
 compiling blink.cpp...
-blink.cpp(37): warning:  #111-D: statement is unreachable
+blink.cpp(12): warning:  #335-D: linkage specification is not allowed
+  int main(void)
+blink.cpp(41): warning:  #111-D: statement is unreachable
   	return 0;
-blink.cpp(63): warning:  #1-D: last line of file ends without a newline
-  }
-blink.cpp: 2 warnings, 0 errors
+blink.cpp(71): warning:  #1-D: last line of file ends without a newline
+  #endif
+blink.cpp: 3 warnings, 0 errors
 linking...
 Program Size: Code=720 RO-data=636 RW-data=8 ZI-data=516  
-".\blink_in_cpp.axf" - 0 Error(s), 2 Warning(s).
+".\blink_in_cpp.axf" - 0 Error(s), 3 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -64,7 +66,7 @@ Package Vendor: Keil
       Include file:  Device\Include\TM4C123\TM4C123.h
       Source file:   Device\Source\ARM\startup_TM4C123.s
       Source file:   Device\Source\system_TM4C123.c
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:04
 </pre>
 </body>
 </html>

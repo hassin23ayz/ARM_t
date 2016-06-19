@@ -5,13 +5,13 @@ Component: ARM Compiler 5.06 update 1 (build 61) Tool: armlink [4d35a8]
 Section Cross References
 
     blink.o(i.SysTick_Handler) refers to blink.o(.data) for delayTimeTick
-    blink.o(i._Z11my_delay_msj) refers to blink.o(.data) for delayTimeTick
     blink.o(i.main) refers to system_tm4c123.o(i.SystemInit) for SystemInit
-    blink.o(i.main) refers to blink.o(i._Z11my_delay_msj) for my_delay_ms(unsigned)
+    blink.o(i.main) refers to blink.o(i.my_delay_ms) for my_delay_ms
     blink.o(i.main) refers to system_tm4c123.o(.data) for SystemCoreClock
-    blink.o(.ARM.exidx) refers to blink.o(i._Z11my_delay_msj) for i._Z11my_delay_msj
+    blink.o(i.my_delay_ms) refers to blink.o(.data) for delayTimeTick
+    blink.o(.ARM.exidx) refers to blink.o(i.my_delay_ms) for i.my_delay_ms
     blink.o(.ARM.exidx) refers to blink.o(i.main) for i.main
-    blink.o(.ARM.exidx) refers to blink.o(i._Z4waitv) for i._Z4waitv
+    blink.o(.ARM.exidx) refers to blink.o(i.wait) for i.wait
     blink.o(.ARM.exidx) refers to blink.o(i.SysTick_Handler) for i.SysTick_Handler
     startup_tm4c123.o(RESET) refers to startup_tm4c123.o(STACK) for __initial_sp
     startup_tm4c123.o(RESET) refers to startup_tm4c123.o(.text) for Reset_Handler
@@ -47,7 +47,7 @@ Removing Unused input sections from the image.
     Removing blink.o(.rev16_text), (4 bytes).
     Removing blink.o(.revsh_text), (4 bytes).
     Removing blink.o(.rrx_text), (6 bytes).
-    Removing blink.o(i._Z4waitv), (20 bytes).
+    Removing blink.o(i.wait), (20 bytes).
     Removing blink.o(.ARM.exidx), (8 bytes).
     Removing blink.o(.ARM.exidx), (8 bytes).
     Removing blink.o(.ARM.exidx), (8 bytes).
@@ -109,11 +109,11 @@ Image Symbol Table
     .text                                    0x0000837c   Section       36  init.o(.text)
     i.SysTick_Handler                        0x000083a0   Section        0  blink.o(i.SysTick_Handler)
     i.SystemInit                             0x000083b8   Section        0  system_tm4c123.o(i.SystemInit)
-    i._Z11my_delay_msj                       0x00008450   Section        0  blink.o(i._Z11my_delay_msj)
-    i.__scatterload_copy                     0x00008468   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x00008476   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x00008478   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i.main                                   0x00008488   Section        0  blink.o(i.main)
+    i.__scatterload_copy                     0x00008450   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x0000845e   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00008460   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.main                                   0x00008470   Section        0  blink.o(i.main)
+    i.my_delay_ms                            0x00008524   Section        0  blink.o(i.my_delay_ms)
     .data                                    0x0000854c   Section        4  blink.o(.data)
     delayTimeTick                            0x0000854c   Data           4  blink.o(.data)
     .data                                    0x00008550   Section        4  system_tm4c123.o(.data)
@@ -263,11 +263,11 @@ Image Symbol Table
     __scatterload_rt2                        0x0000837d   Thumb Code     0  init.o(.text)
     SysTick_Handler                          0x000083a1   Thumb Code    20  blink.o(i.SysTick_Handler)
     SystemInit                               0x000083b9   Thumb Code   112  system_tm4c123.o(i.SystemInit)
-    my_delay_ms(unsigned)                    0x00008451   Thumb Code    18  blink.o(i._Z11my_delay_msj)
-    __scatterload_copy                       0x00008469   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x00008477   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x00008479   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    main                                     0x00008489   Thumb Code   150  blink.o(i.main)
+    __scatterload_copy                       0x00008451   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x0000845f   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00008461   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    main                                     0x00008471   Thumb Code   150  blink.o(i.main)
+    my_delay_ms                              0x00008525   Thumb Code    18  blink.o(i.my_delay_ms)
     Region$$Table$$Base                      0x0000853c   Number         0  anon$$obj.o(Region$$Table)
     Region$$Table$$Limit                     0x0000854c   Number         0  anon$$obj.o(Region$$Table)
     SystemCoreClock                          0x00008550   Data           4  system_tm4c123.o(.data)
@@ -301,12 +301,12 @@ Memory Map of the image
     0x0000837c   0x00000024   Code   RO          156    .text               mc_w.l(init.o)
     0x000083a0   0x00000018   Code   RO            4    i.SysTick_Handler   blink.o
     0x000083b8   0x00000098   Code   RO           95    i.SystemInit        system_tm4c123.o
-    0x00008450   0x00000018   Code   RO            5    i._Z11my_delay_msj  blink.o
-    0x00008468   0x0000000e   Code   RO          160    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x00008476   0x00000002   Code   RO          161    i.__scatterload_null  mc_w.l(handlers.o)
-    0x00008478   0x0000000e   Code   RO          162    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x00008486   0x00000002   PAD
-    0x00008488   0x000000b4   Code   RO            7    i.main              blink.o
+    0x00008450   0x0000000e   Code   RO          160    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0000845e   0x00000002   Code   RO          161    i.__scatterload_null  mc_w.l(handlers.o)
+    0x00008460   0x0000000e   Code   RO          162    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0000846e   0x00000002   PAD
+    0x00008470   0x000000b4   Code   RO            5    i.main              blink.o
+    0x00008524   0x00000018   Code   RO            6    i.my_delay_ms       blink.o
     0x0000853c   0x00000010   Data   RO          158    Region$$Table       anon$$obj.o
 
 

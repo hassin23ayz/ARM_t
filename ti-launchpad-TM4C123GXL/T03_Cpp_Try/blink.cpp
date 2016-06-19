@@ -1,3 +1,7 @@
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "TM4C123.h"                    // Device header
 #include "RTE_Components.h"             // Component selection
 
@@ -61,3 +65,7 @@ void my_delay_ms(unsigned int ticksIn_ms)
 	while(delayTimeTick < ticksIn_ms)
 	{}
 }
+
+#ifdef __cplusplus
+}
+#endif
